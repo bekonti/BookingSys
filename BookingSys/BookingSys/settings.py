@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# superUser: 
+#    log admin
+#    pass : 67890
+
 INSTALLED_APPS = [
     'index',
     'django.contrib.admin',
@@ -119,3 +123,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+ 

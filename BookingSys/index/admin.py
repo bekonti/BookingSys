@@ -1,3 +1,6 @@
 from django.contrib import admin
+from index.models import *
 
-# Register your models here.
+
+admin.site.register(City)
+admin.site.register(Hotel)
