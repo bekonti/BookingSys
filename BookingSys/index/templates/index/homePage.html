@@ -12,6 +12,26 @@
 			<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3></a>
 			<h5>{{hotel.hotel_info}}</h5>
 			<h6>{{hotel.hotel_location}}</h6>
+		<div class="row alert badge-primary">
+			<div class="col-3">
+				<h4 class="alert badge-primary">Booking<span class="badge badge-pill badge-secondary">.com</span></h4>
+			</div>
+			<div class="offset-3"></div>
+			<div class="col-6 alert badge-secondary"><p>Scoro dobavim)</p></div>
+		</div>
+		<a href="/" class="btn btn-success btn-lg">Проживание</a>
+        <a href="/" class="btn btn-success btn-lg">Авиабилеты<!-- &raquo; --></a>
+		<a href="carRent" class="btn btn-success btn-lg">Аренда Машин</a>
+		<a href="/" class="btn btn-success btn-lg">Рестораны</a>
+	</div>
+<div class="container">
+	<h2>Index</h2>
+		<p> өз ссылкаларыңды көрсетіп қойыңдар (href="осы жерге")  пока  что --></p>
+		<p>чтобы басканда сендердің  разделдарың ашылатындай "application ;)"</p>
+	{% for hotel in object_list %}
+		<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3></a>
+		<h5>{{hotel.hotel_info}}</h5>
+		<h6>{{hotel.hotel_location}}</h6>
 
 		{% endfor %}
 	<!-- <div class="">
