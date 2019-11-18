@@ -8,31 +8,60 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<title>Booking</title>
-	{% load staticfiles %}
+	<!-- {% load staticfiles %} -->
 </head>
 <body>
 		<div class="alert badge-primary">	
 			{%include "index/includes/head.html"%}
 		</div>
-	<div class="jumbotron jumbotron-fluid">
+	<div class="container">
 
-	{% block content %}
+		{% block content %}
 
-	{% endblock %}
-
+		{% endblock %}
+	</div>
 	<br><br><br>
-	{%include "index/includes/include.html"%}	
-	{%include "index/includes/include.html"%}
-	{%include "index/includes/include.html"%}
-
 
 	<div class="container">
     	<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
    		<hr>
     	&copy; Все права защищены 2019
    	</div>
-	</div>
-	<!-- </div> -->
+   		<footer>
+		<div class="footer-blurb">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="http://lorempixel.com/100/100/people/3" alt="" width="100" height="100">
+						<h3>My Stuff</h3>
+						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+						<p><a class="btn btn-primary" href="#">More Stuff</a></p>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="http://lorempixel.com/100/100/people/1" alt="" width="100" height="100">
+						<h3>Your Stuff</h3>
+						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+						<p><a class="btn btn-primary" href="#">More Stuff</a></p>
+					</div>
+					<div class="col-sm-4 footer-blurb-item">
+						<img class="img-circle" src="http://lorempixel.com/100/100/people/2" alt="" width="100" height="100">
+						<h3>Our Stuff</h3>
+						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+						<p><a class="btn btn-primary" href="#">More Stuff</a></p>
+					</div>
+
+				</div>
+				<!-- /.row -->
+			</div>
+        </div>
+
+        <div class="copyright">
+        	<div class="container">
+        		<p>Copyright &copy; Example.com 2015</p>
+        	</div>
+        </div>
+	</footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

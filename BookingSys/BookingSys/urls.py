@@ -23,5 +23,5 @@ urlpatterns = [
  	path('', include('index.urls')),
  	path('air', include('flights.urls')),
  	path('cars', include('carRent.urls')),
- 	
+ 	# path('meal', include('restaurants.urls')),
 ]

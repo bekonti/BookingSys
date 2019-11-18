@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'index.SimpleUser'
+LOGIN_REDIRECT_URL = 'Hotel:index'
+LOGOUT_REDIRECT_URL = 'Hotel:index'
 
 # Application definition
 
