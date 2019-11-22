@@ -23,8 +23,11 @@ def showFeedbacks(request, hotel_id):
     except:
         return "No comments yet"
 
-
 class registerView(CreateView):
 	form_class = SimpleUserForm
 	success_url = reverse_lazy('login')
 	template_name = 'registration/register.html'
+
+
+def profile(request):
+	return render(request, "index/userPage.html")

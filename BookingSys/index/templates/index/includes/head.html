@@ -7,7 +7,30 @@
 				</div>
 				<div class="offset-3"></div>
 				<div class="col-6 alert badge-secondary">
-					<div class="row"></div>
+					{% block login %}
+						{% if user.is_authenticated %}
+						<ul class="nav">
+							<li>
+								<a href="{% url 'logout' %}">Logout</a>
+							</li>
+							 --
+							<li>
+								<a href="{% url 'Hotel:profile' %}">{{user.username}}</a>
+						<!-- </li> -->
+						</ul>
+						{% else %}
+							<ul class="nav">
+							<li>
+								<a href="{% url 'Hotel:registration' %}">Registrtion</a>
+							</li>
+							 --
+							<li>
+								<a href="{% url 'login' %}">Login</a>
+						<!-- </li> -->
+						</ul>
+						{% endif %}
+					{% endblock %}
+	
 				</div>
 			</div>
 			<a href="/" class="btn btn-success btn-lg"><i class="fas fa-bed"></i>  Проживание</a>
