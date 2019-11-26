@@ -14,9 +14,35 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- {% load staticfiles %} -->
+	<style>
+		.Comix{
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-size: 25px;
+			letter-spacing: 2px;
+			word-spacing: 2px;
+			color: #000000;
+			font-weight: normal;
+			text-decoration: none;
+			font-style: normal;
+			font-variant: normal;
+			text-transform: none;
+		}
+		.Scaling{
+			transition-duration: 0.5s;
+		}
+		.Scaling:hover {
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+			/*transition-duration: 0.5s;*/
+			/*transition: all 0,5s;*/
+		}
+	</style>
 </head>
 <body>
-		<div class="alert badge-primary">	
+		<div class="alert" style="background-color: #003580">	
 			{%include "index/includes/head.html"%}
 		</div>
 	<div class="container">
@@ -32,34 +58,34 @@
     	<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
    		
    	</div>
-   		<footer>
+   		<footer><br>
 		<div class="footer-blurb">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-6 footer-blurb-item">
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
 						<img class="rounded-circle" src="{% static 'index/image/Bek).jpg' %}" alt="Beka" width="250" height="200">
-						<h3>BeKZat</h3>
+						<h3 class="Comix">BeKZat</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
-						<p><a class="btn btn-primary" href="#">More Info</a></p>
-					</div>
-					<div class="col-lg-3 col-md-6 footer-blurb-item">
+						<p><span class="btn btn-primary" href="#">More Info</span></p>
+					</a>
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
 						<img class="rounded-circle" src="{% static 'index/image/Dinara.jpg' %}" alt="Dinara" width="250" height="200">
-						<h3>Dinara</h3>
+						<h3 class="Comix">Dinara</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
-						<p><a class="btn btn-primary" href="#">More about her</a></p>
-					</div>
-					<div class="col-lg-3 col-md-6 footer-blurb-item">
+						<p><span class="btn btn-primary" href="#">More about her</span></p>
+					</a>
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
 						<img class="rounded-circle" src="{% static 'index/image/Roxa.jpg' %}" alt="" width="250" height="200">
-						<h3>Roxa</h3>
+						<h3 class="Comix">Roxa</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
-						<p><a class="btn btn-primary" href="#">More Info this Developer</a></p>
-					</div>
-					<div class="col-lg-3 col-md-6 footer-blurb-item">
+						<p><span class="btn btn-primary">More Info this Developer</span></p>
+					</a>
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
 						<img class="rounded-circle" src="{% static 'index/image/Bek).jpg' %}" alt="" width="250" height="200">
-						<h3>Abylai</h3>
+						<h3 class="Comix">Abylai</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
-						<p><a class="btn btn-primary" href="#">More Info this Developer</a></p>
-					</div>
+						<p><span class="btn btn-primary">More Info this Developer</span></p>
+					</a>
 				</div>
 				<!-- /.row -->
 			</div>

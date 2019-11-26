@@ -1,0 +1,29 @@
+{% extends "index/wrapper.html" %}
+
+{% block content %}
+	<h2>{{ hotel.hotel_name }}</h2>
+	<ul>
+		<li>{{ hotel.hotel_info|linebreaks }}</li>
+	</ul>
+	<br>
+	<p>
+	{% if user.is_authenticated %}
+		<h3>Feedbacks:</h3>
+		{% if feedBacks %}
+			{% for fb in feedBacks %}
+				<p><b>*{{ fb.user.username }}* left this Feed-Back</b></p>
+				<p>{{fb.fb_text}}</p>
+			{% endfor %}
+		{% else %}
+			<p>No Feedbacks yet</p>
+		{% endif %}
+		<!-- <br><br> -->
+		<form action="" method="post">
+			{% csrf_token %}
+			<textarea name="feedBacks_text" id="" cols="80" rows="8" placeholder="Leave your Feedback here please..."></textarea>
+			<input type="hidden" name="username" value="{{user.username}}">
+			<br><input type="submit" value="Submit">
+		</form>
+	{% endif %}
+	</p>
+{% endblock%}

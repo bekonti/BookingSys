@@ -8,20 +8,42 @@ from .forms import *
 
 
 def index(request):
-	best_hotels = Hotel.objects.order_by('hotel_capacity')
-	return render(request, 'index/homePage.html', {'hotels': best_hotels})
+	best_hotels = Hotel.objects.order_by('-hotel_capacity')
+	return render(request, 'index/homepage.html', {'hotels': best_hotels})
 
 
 def hotel(request, hotel_id):
-	hot = get_object_or_404(Hotel, pk = hotel_id)
+	hotel = get_object_or_404(Hotel, pk = hotel_id)
+	hotels_fb = showFeedbacks(request, hotel_id)
 
+	if request.method == 'POST':
+		try:
+			txt = request.POST.get("fb_text")
+			print(request.POST)
+			feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),
+								user = SimpleUser.objects.get(username=request.POST["username"]))
+			feedBack.save()
+		except:
+			print("The Feed-Backs cannot be added")
+	return render(request, "index/hotel.html", {"hotel":hotel,
+												"feedBacks":hotels_fb})
 
 def showFeedbacks(request, hotel_id):
     try:
-        feedBacks = Comments.objects.filter(article=Article.objects.get(pk=article_id))
-        return comments
+        feedBacks = FeedBack.objects.filter(hotel=Hotel.objects.get(pk=hotel_id))
+        return feedBacks
     except:
-        return "No comments yet"
+        return "No FeedBacks yet"
+
+def addFeedback(request, hotel_id):
+	try:
+		txt = request.POST.get("feedBacks_text")
+		feedBack = FeedBack(fb_text = txt, 
+							hotel = Hotel.objects.get(pk=hotel_id))
+		feedBack.save()
+		return render(request, "index.hotel.html", {"hotel":Hotel.objects.get(pk=hotel_id)})
+	except:
+		return HttpResponse("No such Hotel (")
 
 class registerView(CreateView):
 	form_class = SimpleUserForm

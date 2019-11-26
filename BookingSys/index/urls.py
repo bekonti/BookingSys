@@ -20,4 +20,6 @@ urlpatterns = [
     path("register", views.registerView.as_view(), name="registration"),
 
     path("user/", views.profile, name='profile'),
+    #add comment
+    path('hotel/<int:hotel_id>/comment', views.addFeedback, name='addFeedback')
 ]

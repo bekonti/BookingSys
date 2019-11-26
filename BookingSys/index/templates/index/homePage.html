@@ -3,36 +3,36 @@
 {% block content %}
 {% load static %}
 
-<div class="jumbotron jumbotron-fluid">	
+<div class="">	
 	<div class="container">
-
 		{% for hotel in hotels %}
-			<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3></a>
-			<h5>{{hotel.hotel_info}}</h5>
-			<h6>{{hotel.hotel_location}}</h6>
+		<div  class="Scaling jumbotron">	
+			<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3>
+				<div class="row">
+					<div class="col-md-8">
+						<h5>{{hotel.hotel_info|truncatewords:30}}</h5>
+						<h6>{{hotel.hotel_location}}</h6>
+						<!-- <img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail"  width="250" height="200"> -->
+						<!-- <img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail"  width="250" height="200"> -->
+					</div>
+					<div class="col-md-4">
+						<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
+					</div>		
+				</div>
+			</a>
+		</div>
 		{% endfor %}
-<!-- 		<div class="row alert badge-primary">
-			<div class="col-3">
-				<h4 class="alert badge-primary">Booking<span class="badge badge-pill badge-secondary">.com</span></h4>
-			</div>
-			<div class="offset-3"></div>
-			<div class="col-6 alert badge-secondary"><p>Scoro dobavim)</p></div>
-		</div> -->
-<!-- 		<a href="/" class="btn btn-success btn-lg">Проживание</a>
-        <a href="/" class="btn btn-success btn-lg">Авиабилеты&raquo;</a>
-		<a href="/" class="btn btn-success btn-lg">Аренда Машин</a>
-		<a href="/" class="btn btn-success btn-lg">Рестораны</a> -->
 	</div>
 <div class="container">
-	<h2>Index</h2>
-		<p> өз ссылкаларыңды көрсетіп қойыңдар (href="осы жерге")  пока  что --></p>
-		<p>чтобы басканда сендердің  разделдарың ашылатындай "application ;)"</p>
-	{% for hotel in object_list %}
+<!-- 	<h2>Index</h2>
+		<p> өз ссылкаларыңды көрсетіп қойыңдар (href="осы жерге")  пока  что</p>
+		<p>чтобы басканда сендердің  разделдарың ашылатындай "application ;)"</p> -->
+<!-- 	{% for hotel in object_list %}
 		<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3></a>
 		<h5>{{hotel.hotel_info}}</h5>
 		<h6>{{hotel.hotel_location}}</h6>
 	{% endfor %}
-	<!-- <div class="">
+ -->	<!-- <div class="">
 		<a href="#">Restaurant</a>
 	</div>
 	<div class="">

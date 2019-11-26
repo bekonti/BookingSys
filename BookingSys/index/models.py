@@ -21,20 +21,23 @@ class Hotel(models.Model):
 	hotel_capacity = models.IntegerField(default = 0)  			#сколько людей поместиться в отеле 
 	hotel_stars = models.IntegerField(default = 0)					#сколько  звёзд  у  отеля
 	hotel_location = models.ForeignKey(City, on_delete = models.CASCADE) #в каждом городе есть отель
+	
+	# eco = models.IntegerField(default = 0) # чета не работает 
+	# lux = models.IntegerField(default = 0)	# или не понял структуру модели =(
 
-	def __init__(self):
-		self.lux = int(self.hotel_capacity * 0.2)
-		self.eco = self.hotel_capacity - self.lux
+	# def __init__(self):
+		# self.lux = int(self.hotel_capacity * 0.2)
+		# self.eco = self.hotel_capacity - self.lux
 
 	def __str__(self):
-		return self.hotel_name + ' ' + str(self.lux) + ' ' + str(self.eco)
+		return self.hotel_name #+ ' ' + str(self.lux) + ' ' + str(self.eco)
 
 
 class FeedBack(models.Model):
 	fb_text = models.TextField('text of feedback to Hotel')
 	hotel = models.ForeignKey(Hotel, on_delete = models.CASCADE)
 	user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
-	fb_date = models.DateTimeField('data published')
+	# fb_date = models.DateTimeField('data published')
 
 
 class SimpleUser(AbstractUser):
