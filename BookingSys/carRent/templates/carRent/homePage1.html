@@ -2,47 +2,23 @@
 
 
 {% block content %}
-<div class="jumbotron jumbotron-fluid">	
-	<div class="container">
-		<h2>Index</h2>
-			<p> өз ссылкаларыңды көрсетіп қойыңдар (href="осы жерге")  пока  что --></p>
-			<p>чтобы басканда сендердің  разделдарың ашылатындай "application ;)"</p>
-	
-		{% for hotel in object_list %}
-			<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3></a>
-			<h5>{{hotel.hotel_info}}</h5>
-			<h6>{{hotel.hotel_location}}</h6>
-		{% endfor %}
-		<div class="row alert badge-primary">
-			<div class="col-3">
-				<h4 class="alert badge-primary">Roxa<span class="badge badge-pill badge-secondary">.com</span></h4>
+<div class="container">	
+	<div class="row">	
+		{% for city in cities %}
+		<div class="col-md-4" style="height: 500px;">
+			<div  class="Scaling shadow-lg p-3 mb-5 bg-white rounded">	
+				<a href="">
+					<div class="row"> 
+						<div>
+							<img src="{{city.city_Img.url}}" class="img-thumbnail" width="300" height="500">
+							<h3>{{city.city_name}}</h3>
+							<h5>{{city.city_location}}</h5>
+						</div>
+					</div>
+				</a>
 			</div>
-			<div class="offset-3"></div>
-			<div class="col-6 alert badge-secondary"><p>Scoro dsa)</p></div>
 		</div>
-<!-- 		<a href="/" class="btn btn-success btn-lg">Проживание</a>
-        <a href="/" class="btn btn-success btn-lg">Авиабилеты&raquo;</a>
-		<a href="/" class="btn btn-success btn-lg">Аренда Машин</a>
-		<a href="/" class="btn btn-success btn-lg">Рестораны</a> -->
-	</div>
-<div class="container">
-	<h2>Index</h2>
-		<p> өз ссылкаларыңды көрсетіп қойыңдар (href="осы жерге")  пока  что --></p>
-		<p>чтобы басканда сендердің  разделдарың ашылатындай "application ;)"</p>
-	{% for hotel in object_list %}
-		<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3></a>
-		<h5>{{hotel.hotel_info}}</h5>
-		<h6>{{hotel.hotel_location}}</h6>
-	{% endfor %}
-	<!-- <div class="">
-		<a href="#">Restaurant</a>
-	</div>
-	<div class="">
-		<a href="#">carRent</a>
-	</div>
-	<div class="">
-		<a href="#">Flights</a>
-	</div> -->
+		{% endfor %}
 	</div>
 </div>
 
