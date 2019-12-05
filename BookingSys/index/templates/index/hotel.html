@@ -11,7 +11,7 @@
 		<h3>Feedbacks:</h3>
 		{% if feedBacks %}
 			{% for fb in feedBacks %}
-				<p><b>*{{ fb.user.username }}* left this Feed-Back</b></p>
+				<p><b>*{{ fb.user.username }}* left this Feed-Back: </b></p>
 				<p>{{fb.fb_text}}</p>
 			{% endfor %}
 		{% else %}
@@ -22,7 +22,7 @@
 			{% csrf_token %}
 			<textarea name="feedBacks_text" id="" cols="80" rows="8" placeholder="Leave your Feedback here please..."></textarea>
 			<input type="hidden" name="username" value="{{user.username}}">
-			<br><input type="submit" value="Submit">
+			<br><input type="submit" name="" value="Submit">
 		</form>
 	{% endif %}
 	</p>
