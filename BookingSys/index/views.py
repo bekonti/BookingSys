@@ -11,6 +11,14 @@ def index(request):
 	cities = City.objects.order_by('city_name') #от БД берём города по населению и переобразововаем в лист []
 	return render(request, 'index/homepage.html', {'hotels': best_hotels, 'cities' : cities}) #  передаём этот лист в главный сайт
 
+def byCity(request, city_id):
+	try:
+		best_hotels = Hotel.objects.filter(hotel_location = City.objects.get(pk=city_id))
+		cities = City.objects.order_by('city_name') #от БД берём города по населению и переобразововаем в лист []
+	except:
+		print("no Hotels in this City")
+	return render(request, 'index/homepage.html', {'hotels' : best_hotels,  'cities' : cities})
+
 def hotel(request, hotel_id):
 	hotel = get_object_or_404(Hotel, pk = hotel_id) # Определенный отель из БД
 	hotels_fb = showFeedbacks(request, hotel_id) # и отзывы к этой отели тоже
@@ -37,10 +45,10 @@ def showFeedbacks(request, hotel_id):
 def addFeedback(request, hotel_id):
 	try:
 		txt = request.POST.get("feedBacks_text")
-		feedBack = FeedBack(fb_text = txt, 
-							hotel = Hotel.objects.get(pk=hotel_id))
+		feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),
+							 user=SimpleUser.objects.get(username=request.POST["username"]))
 		feedBack.save()
-		return render(request, "index.hotel.html", {"hotel":Hotel.objects.get(pk=hotel_id)})
+		return render(request, "index/hotel.html", {"hotel":Hotel.objects.get(pk=hotel_id)})
 	except:
 		return HttpResponse("No such Hotel (")
 
