@@ -17,7 +17,7 @@ class CustomizedAdmin(UserAdmin):
         (None, {'fields': ('userImg',)}),
     )
 
-admin.site.register(City)
-admin.site.register(Hotel)
-admin.site.register(FeedBack)
-admin.site.register(SimpleUser,CustomizedAdmin)
+# admin.site.register(City)
+# admin.site.register(Hotel)
+# admin.site.register(FeedBack)
+# admin.site.register(SimpleUser,CustomizedAdmin)
