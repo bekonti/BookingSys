@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">	
 	<div class="row">	
-		{% for city in cities %}
+		{% for city in object_list %}
 		<div class="col-md-4">
 			<div  class="Scaling shadow-lg p-3 mb-5 bg-white rounded">
 				<a href="/cities/{{city.city_name}}">
