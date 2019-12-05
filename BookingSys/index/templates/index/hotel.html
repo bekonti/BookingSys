@@ -16,9 +16,9 @@
 			{% endfor %}
 		{% else %}
 			<p>No Feedbacks yet</p>
-		{% endif %}
+		{% endif %} 
 		<!-- <br><br> -->
-		<form action="" method="post">
+		<form class="" action= "{% url 'Hotel:addFeedback' hotel.id %}" method="post">
 			{% csrf_token %}
 			<textarea name="feedBacks_text" id="" cols="80" rows="8" placeholder="Leave your Feedback here please..."></textarea>
 			<input type="hidden" name="username" value="{{user.username}}">

@@ -5,9 +5,12 @@
 
 <div class="">	
 	<div class="container">
+		<div class="row">
+			
 		{% for hotel in hotels %}
-		<div  class="Scaling jumbotron">	
-			<a href="/hotel/{{hotel.id}}"><h3>{{hotel.hotel_name}}</h3>
+		<div class="col-md-6 img-thumbnail	" style="background-image: url('{% static 'index/image/wwallpaper.jpg' %}');">
+		<div  class="Scaling">
+			<a href="{% url 'Hotel:hotel' hotel.id %}"><h3>{{hotel.hotel_name}}</h3>
 				<div class="row">
 					<div class="col-md-8">
 						<h5>{{hotel.hotel_info|truncatewords:30}}</h5>
@@ -15,15 +18,37 @@
 						<!-- <img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail"  width="250" height="200"> -->
 						<!-- <img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail"  width="250" height="200"> -->
 					</div>
-					<div class="col-md-4">
+<!-- 					<div class="col-md-4">
 						<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
-					</div>		
+					</div> -->		
 				</div>
 			</a>
 		</div>
+		</div>	
 		{% endfor %}
+		</div>
 	</div>
-<div class="container">
+
+		<button class="btn btn-info" data-toggle="modal" data-target="#myModal">Город</button>
+		  <div class="modal fade"  id="myModal">
+		    <div class="modal-dialog modal-md">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <h5 class="modal-title">Выберите Город</h5>
+		          <!-- <button data-dismiss="modal" class="close">x</button> -->
+		        </div>
+		        <div class="modal-body">
+		        	{% for city in cities %}
+						<a href="{% url 'Hotel:HotelsByCity' city.id %}" class="btn blueBook">{{city.city_name}}</a>
+						
+		        	{% endfor %}
+		        </div>
+		          <div class="modal-footer">
+		            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+		          </div>
+		      </div>
+		    </div>
+		  </div>
 <!-- 	<h2>Index</h2>
 		<p> өз ссылкаларыңды көрсетіп қойыңдар (href="осы жерге")  пока  что</p>
 		<p>чтобы басканда сендердің  разделдарың ашылатындай "application ;)"</p> -->
@@ -41,7 +66,7 @@
 	<div class="">
 		<a href="#">Flights</a>
 	</div> -->
-	</div>
+	
 </div>
 
 {% endblock %}
