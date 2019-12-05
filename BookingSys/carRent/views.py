@@ -9,3 +9,7 @@ from django.views.generic.edit import CreateView
 def index(request):
 	cities = CitiesOfCars.objects.order_by('city_name')
 	return render(request, 'carRent/homePage1.html', {'cities': cities})
+	
+def city(request, city):
+	cars = CarMod.objects.filter(city_name=Hotel.objects.get(city_name))
+	return render(request, 'carRent/carList.html', {'carses': cars})

@@ -4,15 +4,15 @@
 {% block content %}
 <div class="container">	
 	<div class="row">	
-		{% for city in cities %}
+		{% for city in carses %}
 		<div class="col-md-4">
 			<div  class="Scaling shadow-lg p-3 mb-5 bg-white rounded">
-				<a href="/cities/{{city.city_name}}">
+				<a href="">
 					<div class="row"> 
 						<div>
-							<img src="{{city.city_Img.url}}" class="img-thumbnail">
+							<img src="{{city.frontImg.url}}" class="img-thumbnail">
+							<h3>{{city.car_name}}</h3>
 							<h3>{{city.city_name}}</h3>
-							<h5>{{city.city_location}}</h5>
 						</div>
 					</div>
 				</a>

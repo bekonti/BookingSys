@@ -24,6 +24,6 @@ urlpatterns = [
     path('', include('django.contrib.auth.urls')),
  	path('', include('index.urls')),
  	path('air', include('flights.urls')),
- 	path('cars', include('carRent.urls')),
+ 	path('cities', include('carRent.urls')),
  	# path('meal', include('restaurants.urls')),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
