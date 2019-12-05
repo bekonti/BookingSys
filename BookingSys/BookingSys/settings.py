@@ -31,6 +31,8 @@ AUTH_USER_MODEL = 'index.SimpleUser'
 LOGIN_REDIRECT_URL = 'Hotel:index'
 LOGOUT_REDIRECT_URL = 'Hotel:index'
 
+
+
 # Application definition
 
 # superUser: 
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'easy_maps'
 ]
 
 MIDDLEWARE = [
