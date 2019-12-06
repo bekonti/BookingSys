@@ -1,18 +1,22 @@
 {% extends "index/wrapper.html" %}
 
+
+{% block title %}
+	Hotels
+{% endblock %}
+
+
 {% block content %}
 {% load static %}
 
-<div class="">	
-		<div class="alert blueBook">	
-			{% include "index/includes/head.html" %}
-		</div>
-			<br><br><br>
+<div class="">
 	<div class="container">
 		<div class="row">
 			
 		{% for hotel in hotels %}
-		<div class="col-md-6 img-thumbnail	" style="background-image: url('{% static 'index/image/wwallpaper.jpg' %}');">
+		<div class="col-md-6 img-thumbnail	" style="
+													background-image: url('{% static 'index/image/rixos.jpg' %sfddjgafk}');
+  ;"> 
 		<div  class="Scaling">
 			<a href="{% url 'Hotel:hotel' hotel.id %}"><h3>{{hotel.hotel_name}}</h3>
 				<div class="row">

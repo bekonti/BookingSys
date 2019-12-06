@@ -23,5 +23,5 @@ urlpatterns = [
 
     path("user/", views.profile, name='profile'),
     #add Feedback
-    path('hotel/<int:hotel_id>/fb/', views.addFeedback, name='addFeedback')
+    # path('hotel/<int:hotel_id>/fb', views.addFeedback, name='addFeedback')
 ]

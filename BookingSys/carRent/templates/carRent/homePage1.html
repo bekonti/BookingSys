@@ -1,12 +1,11 @@
 {% extends "index/wrapper.html" %}
 
+{% block title %}
+	Cars
+{% endblock %}
+
 
 {% block content %}
-
-		<div class="alert blueBook">	
-			{%include "index/includes/head(car).html"%}
-		</div>
-			<br><br><br>
 <div class="container">	
 	<div class="row">	
 		{% for city in object_list %}

@@ -43,10 +43,13 @@ class FeedBack(models.Model):
 	fb_text = models.TextField('text of feedback to Hotel')
 	hotel = models.ForeignKey(Hotel, on_delete = models.CASCADE)
 	user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
-	# fb_date = models.DateTimeField('data published')
+	fb_date = models.DateTimeField('data published', auto_now_add = True)
 
-	def __str__():
-		return self.fb_text
+	def __str__(self):
+		return self.hotel.hotel_name
+
+	class Meta:
+		verbose_name = 'FeedBack'
 
 
 class SimpleUser(AbstractUser):
@@ -54,9 +57,6 @@ class SimpleUser(AbstractUser):
 
 	def __str__(self):
 		return self.username
-	# def __init__(self, arg):
-	# 	super(FeedBack, self).__init__()
-	# 	self.arg = arg
 	
 # # class Room(models.Model):
 # # 	hotel_room = models.ForeignKey(Hotel, on_delete = models.CASCADE) # к какому отелю  принадлежит комната

@@ -27,8 +27,8 @@ def hotel(request, hotel_id):
 		try:
 			txt = request.POST.get("fb_text") # берём текст и присваиванием в txt переменную
 			print(request.POST) 
-			feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),  # создаётся переменная на Отзывы по отелям
-								user = SimpleUser.objects.get(username=request.POST["username"]))  # и загружается отзывы от БД и кто их оставлял
+			feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),  # создаётся переменная на Отзыв 
+								user = SimpleUser.objects.get(username=request.POST["username"]))  # и загружается отзывы в БД и кто их оставлял
 			feedBack.save()
 		except:
 			print("The Feed-Backs cannot be added")
@@ -42,15 +42,15 @@ def showFeedbacks(request, hotel_id):
     except:
         return "No FeedBacks yet"
 
-def addFeedback(request, hotel_id):
-	try:
-		txt = request.POST.get("feedBacks_text")
-		feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),
-							 user=SimpleUser.objects.get(username=request.POST["username"]))
-		feedBack.save()
-		return render(request, "index/hotel.html", {"hotel":Hotel.objects.get(pk=hotel_id)})
-	except:
-		return HttpResponse("No such Hotel (")
+# def addFeedback(request, hotel_id):
+# 	try:
+# 		txt = request.POST.get("feedBacks_text")
+# 		feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),
+# 							 user=SimpleUser.objects.get(username=request.POST["username"]))
+# 		feedBack.save()
+# 		return render(request, "index/hotel.html", {"hotel":Hotel.objects.get(pk=hotel_id)})
+# 	except:
+# 		return HttpResponse("No such Hotel (")
 
 class registerView(CreateView):
 	form_class = SimpleUserForm
