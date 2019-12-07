@@ -4,8 +4,12 @@ from django.views.generic import ListView, DetailView # list of Data from DB
 from carRent.models import *
 from . import views
 
-urlpatterns = [
-	url(r'^$',	views.index),
+app_name = 'CarRent'
 
-	url('cities/<int:city_id>/', views.city),
+urlpatterns = [
+	url(r'^$',	views.index, name="index"),
+
+	path(r'^/<int:city_id>$', views.city, name="cars"),
+	path(r'^/<int:car_id>', views.rent, name="rent"),
+	path(r'^/<int:car_id>', views.renting, name="renting"),
 ]

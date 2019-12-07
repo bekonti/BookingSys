@@ -13,10 +13,10 @@ class CitiesOfCars(models.Model):
 class CarMod(models.Model):
 	class Meta():
 		db_table = "carModels"
-	WHITE = 'white'
-	BLACK = 'black'
-	YELLOW = 'yellow'
-	GRAY = 'gray'
+	WHITE = 'White'
+	BLACK = 'Wlack'
+	YELLOW = 'Wellow'
+	GRAY = 'Gray'
 
 	COLOUR_CHOICES = (
 		(WHITE, 'White'),
@@ -36,5 +36,7 @@ class CarMod(models.Model):
 	def __str__(self):
 		return self.car_name
 	
+	# def isEmpty(self):
+	# 	return amount != 0
 	
 # Create your models here.

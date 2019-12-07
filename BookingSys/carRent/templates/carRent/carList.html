@@ -3,9 +3,46 @@
 
 {% block content %}
 <div class="container">	
-	<div class="row">	
-		{% for city in object_list %}
+
+	{% if cars %}
+	<div class="row"><h3>Посуточная аренда автомобилей для любой поездки</h3></div>
+	<div class="row">
+		{% for carsOfCity in cars %}
 		<div class="col-md-4">
+			<div  class="Scaling shadow-lg mb-5 rounded">
+				<a href="{% url 'CarRent:rent' carsOfCity.id %}">
+					<div class="card">
+						<div class="embed-responsive embed-responsive-4by3">
+							<img src="{{carsOfCity.frontImg.url}}" class="embed-responsive-item">
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-9">
+									<h5 class="card-title">{{carsOfCity.car_name}}</h5>
+									<p class="card-text">{{carsOfCity.city_name}}</p>
+								</div>
+								<div class="col-3">
+									<i class="btn btn-primary">Rent</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{%else%}
+	<h1>No Cars</h1>
+	{% endif %}
+	
+</div>
+
+{% endblock %}
+
+
+
+		<!-- <div class="col-md-4">
 			<div  class="Scaling shadow-lg p-3 mb-5 bg-white rounded">
 				<a href="">
 					<div class="row"> 
@@ -17,9 +54,4 @@
 					</div>
 				</a>
 			</div>
-		</div>
-		{% endfor %}
-	</div>
-</div>
-
-{% endblock %}
+		</div> -->

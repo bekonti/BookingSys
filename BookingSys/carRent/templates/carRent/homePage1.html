@@ -1,20 +1,48 @@
-{% extends "index/wrapper.html" %}
+{% extends "carRent/wrapper1.html" %}
 
 {% block title %}
-	Cars
+Cars
 {% endblock %}
 
 
 {% block content %}
 <div class="container">	
+
 	<div class="row">	
 		{% for city in object_list %}
 		<div class="col-md-4">
+			<div  class="Scaling shadow-lg mb-5 rounded">
+				<a href="{% url 'CarRent:cars' city.id %}">
+					<div class="card">
+						<div class="embed-responsive embed-responsive-4by3">
+							<img src="{{city.city_Img.url}}" class="embed-responsive-item">
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-8">
+									<h5 class="card-title">{{city.city_name}}</h5>
+									<p class="card-text">{{city.city_location}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div>	
+
+
+<!-- 	<div class="row">	
+		{% for city in object_list %}
+		<div class="col-md-4">
 			<div  class="Scaling shadow-lg p-3 mb-5 bg-white rounded">
-				<a href="/cities/{{city.city_name}}">
+				<a href="{% url 'CarRent:cars' city.id %}">
 					<div class="row"> 
+						<div class="img-center" style="height: 250px;">
+							<img src="{{city.city_Img.url}}" class="img-thumbnail" style="height: 100%; width: 100%;">
+						</div>
 						<div>
-							<img src="{{city.city_Img.url}}" class="img-thumbnail">
 							<h3>{{city.city_name}}</h3>
 							<h5>{{city.city_location}}</h5>
 						</div>
@@ -23,6 +51,107 @@
 			</div>
 		</div>
 		{% endfor %}
+	</div> -->
+
+	<!-- <div class="row">	
+		{% for city in object_list %}
+		<div class="col-md-4">
+			<div  class="Scaling shadow-lg p-3 mb-5 bg-white rounded">
+				<a href="{% url 'CarRent:cars' city.id %}">
+					<div class="row"> 
+						<div class="embed-responsive embed-responsive-4by3">
+							<img src="{{city.city_Img.url}}" class="embed-responsive-item">
+						</div>
+						<div>
+							<h3>{{city.city_name}}</h3>
+							<h5>{{city.city_location}}</h5>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div> -->
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-lg-5 jumbotron">
+
+			<div class="feature-car-rent-box-1">
+				<h3>Range Rover S7</h3>
+				<ul class="list-unstyled">
+					<li>
+						<div class="row alert">
+							<div class="col-7">
+								<span>Doors</span>
+							</div>
+							<div class="col-5">
+								<span class="spec">4</span>
+							</div>
+						</div>
+						<hr>
+					</li>
+					<li>
+						<div class="row alert">
+							<div class="col-7">
+								<span>Seats</span>
+							</div>
+							<div class="col-5">
+								<span class="spec">6</span>
+							</div>
+						</div>
+						<hr>
+					</li>
+					<li>
+						<div class="row alert">
+							<div class="col-7">
+								<span>Lugage</span>
+							</div>
+							<div class="col-5">
+								<span class="spec">2 Suitcase/2 Bags</span>
+							</div>
+						</div>
+						<hr>
+					</li>
+					<li>
+						<div class="row alert">
+							<div class="col-7">
+								<span>Transmission</span>
+							</div>
+							<div class="col-5">
+								<span class="">Automatic</span>
+							</div>
+						</div>
+						<hr>
+					</li>
+					<li>
+						<div class="row alert">
+							<div class="col-7">
+								<span>Minium age</span>
+							</div>
+							<div class="col-5">
+								<span class="">Automatic</span>
+							</div>
+						</div>
+						<hr>
+					</li>
+				</ul>
+				<div class="">
+					<div class="row alert">
+						<div class="col-7">
+							<span>$150/day</span>
+						</div>
+						<div class="col-5">
+							<a href="" class="ml-auto btn btn-primary">Rent Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 

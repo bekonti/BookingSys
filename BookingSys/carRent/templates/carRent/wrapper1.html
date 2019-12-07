@@ -2,14 +2,27 @@
 <html lang="en">
 <head>
 	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <style>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<!-- Time Peacker -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="jquery.datetimepicker.min.css" rel="stylesheet"/>
+	<!-- Time Peacker -->
+
+
+	<title> Booking {% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- {% load staticfiles %} -->
+	<style>
 		.Comix{
 			font-family: "Comic Sans MS", cursive, sans-serif;
 			font-size: 25px;
@@ -34,35 +47,132 @@
 			/*transition-duration: 0.5s;*/
 			/*transition: all 0,5s;*/
 		}
-	</style>
+		.blueBook{
+			background-color: #003580;
+			color: #FFFFFF;
+		}
 
-	<title>Booking</title>
-	{% load staticfiles %}
+		a:hover{
+			text-decoration: none;
+			color: #298cad;
+		}
+
+	</style>
 </head>
 <body>
-	<div class="alert" style="background-color: #003580">	
-			{%include "index/includes/head.html"%}
+	<div class="alert blueBook">	
+		{%include "carRent/includes/head1.html"%}
+		<br><br><br>
 	</div>
 	<div class="container">
-
-		{% block search %}
-	
-		{% endblock %}
-
 
 		{% block content %}
 
 		{% endblock %}
-
 	</div>
+	<br><br><br>
+
 	<div class="container">
-    	<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
-   		<!-- <hr> -->
-    	&copy; Все права not защищены 2019
-   	</div>
-	<!-- </div> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
+		<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
+		
+	</div>
+	<footer><br>
+		<div class="footer-blurb">
+			<div class="container">
+				<div class="row">
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+						<img class="rounded-circle" src="{% static 'index/image/Bek).jpg' %}" alt="Beka" width="250" height="200">
+						<h3 class="Comix">BeKZat</h3>
+						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+						<p><span class="btn btn-primary" href="#">More Info</span></p>
+					</a>
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+						<img class="rounded-circle" src="{% static 'index/image/Dinara.jpg' %}" alt="Dinara" width="250" height="200">
+						<h3 class="Comix">Dinara</h3>
+						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+						<p><span class="btn btn-primary" href="#">More about her</span></p>
+					</a>
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+						<img class="rounded-circle" src="{% static 'index/image/Roxa.jpg' %}" alt="" width="250" height="200">
+						<h3 class="Comix">Roxa</h3>
+						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+						<p><span class="btn btn-primary">More Info this Developer</span></p>
+					</a>
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+						<img class="rounded-circle" src="{% static 'index/image/Bek).jpg' %}" alt="" width="250" height="200">
+						<h3 class="Comix">Abylai</h3>
+						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+						<p><span class="btn btn-primary">More Info this Developer</span></p>
+					</a>
+				</div>
+				<!-- /.row -->
+			</div>
+		</div>
+
+		<div class="copyright">
+			<div class="container">
+				<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+					<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+						var setting = {"height":575,"width":1083,"zoom":12,"queryString":"Almaty, Казахстан","place_id":"ChIJq8vFFn1ugzgRdm2YrY9mRD0","satellite":false,"centerCoord":[43.22445542892382,76.89129762154913],"cid":"0x3d44668fad986d76","lang":"ru","cityUrl":"/kazakhstan/abay-280276","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"126712"};
+						var d = document;
+						var s = d.createElement('script');
+						s.src = 'https://1map.com/js/script-for-user.js?embed_id=126712';
+						s.async = true;
+						s.onload = function (e) {
+							window.OneMap.initMap(setting)
+						};
+						var to = d.getElementsByTagName('script')[0];
+						to.parentNode.insertBefore(s, to);
+					})();</script><a href="https://1map.com/ru/map-embed?embed_id=126712">1 Map</a></div>
+					<hr>&copy; Все права защищены 2019	
+				</div>
+			</div>
+		</footer>
+	<!-- <script>
+		$('#myModal').modal("show");
+  		// $('#myModal').on('hide.bs.modal', function(event){
+    		// alert("Done");
+  		// });
+  	</script> -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  	<!-- Fotorama from CDNJS, 19 KB -->
+  	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  	<!-- Time Peacker -->
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<script src="https//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script src="jquery.datetimepicker.full.min.js"></script>
+  	<script>
+  		$('#picker1').datetimepicker({
+  			timepicker: true,
+  			datepicker: true,
+  			format: 'Y-m-d H:i',
+  			onShow: function(ct) {
+  				this.setOptions({
+  					maxDate: $('#picker2').val() ? $('#picker2').val() : false
+  				})
+  			}
+  		})
+  		$('#picker2').datetimepicker({
+  			timepicker: true,
+  			datepicker: true,
+  			format: 'Y-m-d H:i',
+  			onShow: function(ct) {
+  				this.setOptions({
+  					minDate: $('#picker1').val() ? $('#picker1').val() : false
+  				})
+  			}
+  		})
+  	</script>
+  	<!-- Time Peacker -->
+
+  </body>
+  </html>

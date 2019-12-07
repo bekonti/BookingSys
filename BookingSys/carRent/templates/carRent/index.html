@@ -1,0 +1,84 @@
+{% extends "carRent/wrapper1.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 jumbotron">
+      <div class="feature-car-rent-box-1">
+        <h3>{{car.car_name}}</h3>
+        <ul class="list-unstyled">
+          <li>
+            <div class="row alert">
+              <div class="col-7">
+                <span>Made data</span>
+              </div>
+              <div class="col-5">
+                <span class="spec">{{car.madeDate}}</span>
+              </div>
+            </div>
+            <hr>
+          </li>
+          <li>
+            <div class="row alert">
+              <div class="col-7">
+                <span>Car colour</span>
+              </div>
+              <div class="col-5">
+                <span class="spec">{{car.car_colour}}</span>
+              </div>
+            </div>
+            <hr>
+          </li>
+          <li>
+            <div class="row alert">
+              <div class="col-7">
+                <span>Lugage</span>
+              </div>
+              <div class="col-5">
+                <span class="spec">2 Suitcase/2 Bags</span>
+              </div>
+            </div>
+            <hr>
+          </li>
+          <li>
+            <div class="row alert">
+              <div class="col-7">
+                <span>Transmission</span>
+              </div>
+              <div class="col-5">
+                <span class="">Automatic</span>
+              </div>
+            </div>
+            <hr>
+          </li>
+        </ul>
+        <div class="">
+          <div class="row alert">
+            <div class="col-7">
+              <span>$150/day</span>
+            </div>
+            <div class="col-5">
+              <a href="{% url 'CarRent:renting' car.id %}" class="ml-auto btn btn-primary">Rent Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="fotorama" data-nav="thumbs" data-loop="true"  data-width="100%" data-allowfullscreen="true" data-fit="cover" data-clicktransition="dissolve" data-keyboard="true" data-autoplay="3000">
+       <a href="{{car.frontImg.url}}"><img src="{{car.frontImg.url}}" width="64" height="64"></a>
+       <a href="{{car.janImg.url}}"><img src="{{car.janImg.url}}" width="64" height="64"></a>
+       <a href="{{car.ishImg.url}}"><img src="{{car.ishImg.url}}" width="64" height="64"></a>
+     </div>
+   </div>
+ </div>
+ <div class="row">
+    <div class="container mt-5 mb-5" style="width: 400px" >
+    <h3>Start date Picker</h3>
+    <input type="text" id="picker1" class="form-control">
+    <h3>End date Picker</h3>
+    <input type="text" id="picker2" class="form-control">
+  </div>
+ </div>
+</div>
+{% endblock %}
