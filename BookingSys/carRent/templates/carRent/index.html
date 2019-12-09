@@ -58,7 +58,7 @@
               <span>$150/day</span>
             </div>
             <div class="col-5">
-              <a href="{% url 'CarRent:renting' car.id %}" class="ml-auto btn btn-primary">Rent Now</a>
+              <a href="{% url 'CarRent:payment' %}" class="ml-auto btn btn-primary">Rent Now</a>
             </div>
           </div>
         </div>
@@ -71,14 +71,6 @@
        <a href="{{car.ishImg.url}}"><img src="{{car.ishImg.url}}" width="64" height="64"></a>
      </div>
    </div>
- </div>
- <div class="row">
-    <div class="container mt-5 mb-5" style="width: 400px" >
-    <h3>Start date Picker</h3>
-    <input type="text" id="picker1" class="form-control">
-    <h3>End date Picker</h3>
-    <input type="text" id="picker2" class="form-control">
-  </div>
  </div>
 </div>
 {% endblock %}

@@ -16,8 +16,7 @@ def city(request, city_id):
 
 def rent(request, car_id):
 	car = CarMod.objects.get(pk=car_id)
-	return render(request, 'carRent/gg/index.html', {'car': car})
+	return render(request, 'carRent/index.html', {'car': car})
 
-def renting(request, car_id):
-	car = CarMod.objects.get(pk=car_id)
-	return render(request, 'carRent/rentingPage.html', {'car': car})
+def payment(request):
+	return render(request, 'carRent/payment.html')

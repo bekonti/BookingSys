@@ -11,7 +11,7 @@
 
 	<!-- Time Peacker -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="jquery.datetimepicker.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
 	<!-- Time Peacker -->
 
 
@@ -72,11 +72,7 @@
 	</div>
 	<br><br><br>
 
-	<div class="container">
-		<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
-		
-	</div>
-	<footer><br>
+	<footer>
 		<div class="footer-blurb">
 			<div class="container">
 				<div class="row">
@@ -105,14 +101,21 @@
 						<p><span class="btn btn-primary">More Info this Developer</span></p>
 					</a>
 				</div>
-				<!-- /.row -->
 			</div>
 		</div>
-
 		<div class="copyright">
 			<div class="container">
-				<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-					<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+				<hr> &copy; Все права защищены 2019
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- map -->
+
+            <!-- <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+					<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+					<script>(function () {
 						var setting = {"height":575,"width":1083,"zoom":12,"queryString":"Almaty, Казахстан","place_id":"ChIJq8vFFn1ugzgRdm2YrY9mRD0","satellite":false,"centerCoord":[43.22445542892382,76.89129762154913],"cid":"0x3d44668fad986d76","lang":"ru","cityUrl":"/kazakhstan/abay-280276","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"126712"};
 						var d = document;
 						var s = d.createElement('script');
@@ -123,11 +126,15 @@
 						};
 						var to = d.getElementsByTagName('script')[0];
 						to.parentNode.insertBefore(s, to);
-					})();</script><a href="https://1map.com/ru/map-embed?embed_id=126712">1 Map</a></div>
-					<hr>&copy; Все права защищены 2019	
-				</div>
-			</div>
-		</footer>
+					})();</script>
+					<a href="https://1map.com/ru/map-embed?embed_id=126712">1 Map</a>
+				</div> -->
+
+				<!-- map -->
+
+
+
+
 	<!-- <script>
 		$('#myModal').modal("show");
   		// $('#myModal').on('hide.bs.modal', function(event){
@@ -143,13 +150,31 @@
   	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  	<!-- Плавный переход -->
+<!--   	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  	<script type="text/javascript">
+  		$(document).ready(function(){
+  			$('a[href^="#""]').on("click","a", function (event) {
+  				event.preventDefault();
+  				var id  = $(this).attr('href'),
+  				top = $(id).offset().top;
+  				$('body,html').animate({scrollTop: top}, 1500);
+  			});
+  		});
+  	</script> -->
 
+
+  	<!-- Плавный переход -->
 
   	<!-- Time Peacker -->
-  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  	<script src="https//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  	<script src="https//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  	<script src="jquery.datetimepicker.full.min.js"></script>
+  	<script
+  	src="https://code.jquery.com/jquery-3.4.1.js"
+  	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  	crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
   	<script>
   		$('#picker1').datetimepicker({
   			timepicker: true,

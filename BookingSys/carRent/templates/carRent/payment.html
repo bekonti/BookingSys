@@ -1,0 +1,53 @@
+{% extends "carRent/wrapper1.html" %}
+
+
+
+{% block content %}
+
+<div class="row" id="renting">
+	<div class="col-5 container jumbotron alert">
+		<div class="row" style="justify-content: center;"><h3>Checkout</h3></div>
+		<div class="row alert">
+			<input type="text" id="name" class="form-control" placeholder="Name">
+		</div>
+		<div class="row alert">
+			<input type="text" id="surname" class="form-control" placeholder="Surname">
+		</div>
+		<div class="row alert">
+			<input type="tel" id="telnum" class="form-control" placeholder="Telephone" maxlength="11">
+		</div>
+		<div class="row alert">
+			<input type="email" id="email" class="form-control" placeholder="Email">
+		</div>
+		<div class="row alert" style="display: list-item; list-style-type: none;">
+			<h6>Front img of your driver license</h6>
+			<input type="file" id="VPF" class="" placeholder="Img">
+		</div>
+		<div class="row alert" style="display: list-item; list-style-type: none;">
+			<h6>Back img of your driver license</h6>
+			<input type="file" id="VPB" class="" placeholder="Email">
+		</div>
+		<div class="row alert">
+			<div class="col-6">
+				<h5>Start rent date</h5>
+				<input type="text" id="picker1" class="form-control">
+			</div>
+			<div class="col-6">
+				<h5>End rent date</h5>
+				<input type="text" id="picker2" class="form-control">
+			</div>
+		</div>
+		<div class="row" style="justify-content: center;">
+			<a href="{% url 'CarRent:payment' %}" class="btn btn-success">Checkout</a>
+		</div>
+	</div>
+	<div class="col-1"></div>
+	<div class="col-6">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d185924.76085756917!2d76.8359213484264!3d43.27044220544006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20727ec3b61d204d!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0LDRjdGA0L7Qv9C-0YDRgiDQkNC70LzQsNGC0Ys!5e0!3m2!1sru!2skz!4v1575721678817!5m2!1sru!2skz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+	
+</div>
+
+{% endblock %}
+
+

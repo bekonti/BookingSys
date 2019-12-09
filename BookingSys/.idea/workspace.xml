@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="264bac8b-93be-467e-8b38-196484a22b21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/gg/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/carRent/templates/carRent/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/jquery.datetimepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/jquery.datetimepicker.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/jquery.datetimepicker.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/jquery.datetimepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/jquery.datetimepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/jquery.datetimepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/rentingPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/templates/carRent/wrapper1.html" beforeDir="false" afterPath="$PROJECT_DIR$/carRent/templates/carRent/wrapper1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/carRent/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carRent/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carRent/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +30,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/untitled1" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/LanguageCenter" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
