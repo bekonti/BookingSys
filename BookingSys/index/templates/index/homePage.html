@@ -44,7 +44,6 @@
 		        <div class="modal-body">
 		        	{% for city in cities %}
 						<a href="{% url 'Hotel:HotelsByCity' city.id %}" class="btn blueBook">{{city.city_name}}</a>
-						
 		        	{% endfor %}
 		        </div>
 		          <div class="modal-footer">

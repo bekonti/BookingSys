@@ -26,6 +26,9 @@ def payment(request):
         payment_form = PaymentForm(request.POST)
         if payment_form.is_valid():
             payment_form.save()
+            # car = CarMod.objects.get(pk=car_id)
+            # car.amount = car.amount - 1
+            # car.save()
             return redirect('CarRent:index')
     else:
         payment_form = PaymentForm()

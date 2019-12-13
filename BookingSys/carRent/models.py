@@ -28,17 +28,6 @@ class CitiesOfCars(models.Model):
 class CarMod(models.Model):
 	class Meta():
 		db_table = "carModels"
-	# WHITE = 'White'
-	# BLACK = 'Wlack'
-	# YELLOW = 'Wellow'
-	# GRAY = 'Gray'
-
-	# COLOUR_CHOICES = (
-	# 	(WHITE, 'White'),
-	# 	(BLACK, 'Black'),
-	# 	(YELLOW, 'Yellow'),
-	# 	(GRAY, 'Gray'),
-	# )
 	
 	car_name = models.CharField(max_length = 50)
 	city_name = models.ForeignKey(CitiesOfCars, on_delete = models.CASCADE)
@@ -47,7 +36,6 @@ class CarMod(models.Model):
 	ishImg = models.ImageField(upload_to='carImg/', default='NULL')
 	madeDate = models.IntegerField(default=2000)
 	amount = models.IntegerField(default=20)
-	# car_colour = models.CharField(max_length = 50, choices = COLOUR_CHOICES, default = WHITE)
 	def __str__(self):
 		return self.car_name
 	
