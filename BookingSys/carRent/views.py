@@ -1,9 +1,10 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from .models import *
 from django.urls import reverse, reverse_lazy
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.views.generic.edit import CreateView
+from .forms import *
 
 
 def index(request):
@@ -18,5 +19,14 @@ def rent(request, car_id):
 	car = CarMod.objects.get(pk=car_id)
 	return render(request, 'carRent/index.html', {'car': car})
 
+
+
 def payment(request):
-	return render(request, 'carRent/payment.html')
+    if request.method == 'POST':
+        payment_form = PaymentForm(request.POST)
+        if payment_form.is_valid():
+            payment_form.save()
+            return redirect('CarRent:index')
+    else:
+        payment_form = PaymentForm()
+    return render(request,'carRent/payment.html', {'payment_form':payment_form})
