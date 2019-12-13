@@ -14,6 +14,17 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- {% load staticfiles %} -->
+	<!-- jQuery 1.8 or later, 33 KB -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Fotorama from CDNJS, 19 KB -->
+	<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+	
+	<!-- Time Peacker -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+	<!-- Time Peacker -->
 	<style>
 		.Comix{
 			font-family: "Comic Sans MS", cursive, sans-serif;
@@ -43,6 +54,9 @@
 			background-color: #003580;
 			color: #FFFFFF;
 		}
+		.whiteBack{
+			background-color: #FFFFFF;		
+		}
 	</style>
 </head>
 <body>
@@ -59,32 +73,32 @@
 	<br><br><br>
 
 	<div class="container">
-    	<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
+    	<!-- <img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail"> -->
    		
    	</div>
-   		<footer><br>
-		<div class="footer-blurb">
+   		<footer class="blueBook"><br>
+		<div class="footer-blurb" >
 			<div class="container">
 				<div class="row">
-					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item whiteBack">
 						<img class="rounded-circle" src="{% static 'index/image/Bek).jpg' %}" alt="Beka" width="250" height="200">
 						<h3 class="Comix">BeKZat</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
 						<p><span class="btn btn-primary" href="#">More Info</span></p>
 					</a>
-					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item whiteBack">
 						<img class="rounded-circle" src="{% static 'index/image/Dinara.jpg' %}" alt="Dinara" width="250" height="200">
 						<h3 class="Comix">Dinara</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
 						<p><span class="btn btn-primary" href="#">More about her</span></p>
 					</a>
-					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item  whiteBack">
 						<img class="rounded-circle" src="{% static 'index/image/Roxa.jpg' %}" alt="" width="250" height="200">
 						<h3 class="Comix">Roxa</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
 						<p><span class="btn btn-primary">More Info this Developer</span></p>
 					</a>
-					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item">
+					<a href="#" class="Scaling col-lg-3 col-md-6 footer-blurb-item whiteBack">
 						<img class="rounded-circle" src="{% static 'index/image/Bek).jpg' %}" alt="" width="250" height="200">
 						<h3 class="Comix">Abylai</h3>
 						<p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>

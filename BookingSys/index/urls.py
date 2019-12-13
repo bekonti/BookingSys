@@ -15,8 +15,11 @@ urlpatterns = [
     #login page
     path('', auth_login, name="login"),
 	
-	#localhost:8000/hotel/id
+    #localhost:8000/hotel/id
 	path('hotel/<int:hotel_id>/', views.hotel, name='hotel'),
+    
+    #localhost:8000/hotel/id
+    path('hotel/<int:hotel_id>/feedback', views.addFeedback, name="addFeedback"),
 	
     #registraion
     path("register", views.registerView.as_view(), name="registration"),

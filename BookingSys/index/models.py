@@ -22,14 +22,14 @@ class City(models.Model):
 class Hotel(models.Model):
 	hotel_name = models.CharField('name of Hotel', max_length = 50)		# имя отеля
 	hotel_info = models.TextField('Info about Hotel',)						# информация об отеле
-	hotel_capacity = models.IntegerField(default = 0)  			#сколько людей поместиться в отеле 
+	hotel_capacity = models.IntegerField(default = 10)  			#сколько людей поместиться в отеле 
 	hotel_stars = models.IntegerField(default = 0)					#сколько  звёзд  у  отеля
 	hotel_location = models.ForeignKey(City, on_delete = models.CASCADE) #в каждом городе есть отель
-	# hotel_ = models.ImageField(upload_to='hotel_pics/') # фотография отеля
-	# hotel_pic1 = model.ImageField(upload_to='hotel_pic1/') # фотография 1
-	# hotel_pic2 = model.ImageField(upload_to='hotel_pic2/') # фотография 2
-	# eco = models.IntegerField(default = 0) # чета не работает 
-	# lux = models.IntegerField(default = 0)	# или не понял структуру модели =(
+	hotel_pics = models.ImageField(upload_to='hotel_pics/', default = 'NULL') # фотография отеля
+	hotel_pic1 = models.ImageField(upload_to='hotel_pic1/', default = 'NULL') # фотография 1
+	hotel_pic2 = models.ImageField(upload_to='hotel_pic2/', default = 'NULL') # фотография 2
+	eco = models.IntegerField(default = 7)  # чета не работает 
+	lux = models.IntegerField(default = 3)	# или не понял структуру модели =(
 
 	# def __init__(self):
 		# self.lux = int(self.hotel_capacity * 0.2)

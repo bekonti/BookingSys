@@ -23,17 +23,28 @@ def hotel(request, hotel_id):
 	hotel = get_object_or_404(Hotel, pk = hotel_id) # Определенный отель из БД
 	hotels_fb = showFeedbacks(request, hotel_id) # и отзывы к этой отели тоже
 
-	if request.method == 'POST':
-		try:
-			txt = request.POST.get("fb_text") # берём текст и присваиванием в txt переменную
-			print(request.POST) 
-			feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),  # создаётся переменная на Отзыв 
-								user = SimpleUser.objects.get(username=request.POST["username"]))  # и загружается отзывы в БД и кто их оставлял
-			feedBack.save()
-		except:
-			print("The Feed-Backs cannot be added")
+	# if request.method == 'POST':
+	# 	try:
+	# 		txt = request.POST.get("fb_text") # берём текст и присваиванием в txt переменную
+	# 		print(request.POST) 
+	# 		feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),  # создаётся переменная на Отзыв 
+	# 							user = SimpleUser.objects.get(username=request.POST["username"]))  # и загружается отзывы в БД и кто их оставлял
+	# 		feedBack.save()
+	# 	except:
+	# 		print("The Feed-Backs cannot be added")
 	return render(request, "index/hotel.html", {"hotel":hotel,
 												"feedBacks":hotels_fb})
+
+def addFeedback(request, hotel_id):
+	try:
+		txt = request.POST.get("feedBacks_text")
+		feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),
+							 user=SimpleUser.objects.get(username=request.POST["username"]))
+		feedBack.save()
+		# hotels_fb = showFeedbacks(request, hotel_id) # и отзывы к этой отели тоже
+		return  hotel(request,hotel_id) #render(request, "index/hotel.html", {"hotel":Hotel.objects.get(pk=hotel_id),"feedBacks":hotels_fb})
+	except:
+		return HttpResponse("No such Hotel (")
 
 def showFeedbacks(request, hotel_id):
     try:
@@ -41,16 +52,6 @@ def showFeedbacks(request, hotel_id):
         return feedBacks
     except:
         return "No FeedBacks yet"
-
-# def addFeedback(request, hotel_id):
-# 	try:
-# 		txt = request.POST.get("feedBacks_text")
-# 		feedBack = FeedBack(fb_text = txt, hotel = Hotel.objects.get(pk=hotel_id),
-# 							 user=SimpleUser.objects.get(username=request.POST["username"]))
-# 		feedBack.save()
-# 		return render(request, "index/hotel.html", {"hotel":Hotel.objects.get(pk=hotel_id)})
-# 	except:
-# 		return HttpResponse("No such Hotel (")
 
 class registerView(CreateView):
 	form_class = SimpleUserForm

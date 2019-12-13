@@ -12,27 +12,24 @@
 <div class="">
 	<div class="container">
 		<div class="row">
-			
 		{% for hotel in hotels %}
-		<div class="col-md-6 img-thumbnail	" style="
-													background-image: url('{% static 'index/image/rixos.jpg' %sfddjgafk}');
-  ;"> 
-		<div  class="Scaling">
+		<div class="col-md-5 rounded" style="	
+		background-image: url('{{hotel.hotel_pics.url}}');
+		background-size: cover;
+		height: 500px;
+  "> 
+		<div class="Scaling">
 			<a href="{% url 'Hotel:hotel' hotel.id %}"><h3>{{hotel.hotel_name}}</h3>
 				<div class="row">
 					<div class="col-md-8">
 						<h5>{{hotel.hotel_info|truncatewords:30}}</h5>
 						<h6>{{hotel.hotel_location}}</h6>
-						<!-- <img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail"  width="250" height="200"> -->
-						<!-- <img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail"  width="250" height="200"> -->
-					</div>
-<!-- 					<div class="col-md-4">
-						<img src="{% static 'index/image/wwallpaper.jpg' %}" class="img-thumbnail">
-					</div> -->		
+					</div>		
 				</div>
 			</a>
 		</div>
-		</div>	
+		</div>
+		<div class="col-1"></div>	
 		{% endfor %}
 		</div>
 

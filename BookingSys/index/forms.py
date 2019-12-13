@@ -12,3 +12,9 @@ class SimpleUserChangeForm(UserChangeForm):
 		model = SimpleUser
 		fields = ('email','username','userImg')
 			
+class DateInput(forms.Form):
+	input_type = 'date'
+
+class DateForm(forms.Form):
+	check_in_field = forms.DateField(widget = DateInput)
+		
